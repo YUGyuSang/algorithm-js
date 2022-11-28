@@ -122,3 +122,90 @@ function solution(array, height) {
     return answer;
 }
 
+//중복된 숫자 개수
+function solution(array, n) {
+    var answer = 0;
+    for(let i = 0; i<array.length; i++){
+        if(array[i] == n){
+            answer = answer + 1;
+        }
+    }
+    return answer;
+}
+
+//피자 나눠 먹기
+function solution(n) {
+    var answer = 0;
+    
+    return parseInt(n/7) + n%7;
+}
+
+//배열 자르기
+function solution(numbers, num1, num2) {
+    var answer=[]; /*= numbers.splice(num1,num2);*/
+    for(num1; num1 <= num2; num1++){
+       answer.push(numbers[num1]) 
+    }
+    
+    return answer;
+}
+
+//배열 뒤집기
+function solution(num_list) {
+    var answer = [];
+    for(let i =num_list.length-1 ; i >= 0; i--){
+        answer.push(num_list[i]);    
+    }
+    return answer;
+}
+
+//문자열 뒤집기
+function solution(my_string) {
+    var answer = my_string.split("").reverse().join(""); 
+    return answer;
+}
+
+//짝수 홀수 개수
+function solution(num_list) {
+    var answer = [];
+    let i= 0;
+    let a = 0;
+    let b= 0;
+        for(i; i<num_list.length; i++){
+            if(num_list[i]%2 == 0){
+                a = a+1;
+            }else{
+                b= b+1;
+            }
+       }
+    answer.push(a,b);
+    return answer;
+}
+
+//아이스 아메리카노
+function solution(money) {
+    var answer = [];
+    let a = money / 5500;
+    let b = money % 5500;
+    answer.push(parseInt(a),b);
+    return answer;
+}
+
+//점의 위치 구하기
+function solution(dot) {
+    var answer = 0;
+    let x = dot[0];
+    let y = dot[1];
+    
+    
+    if(x>0 && y<0){
+        return 4;
+    }else if(x<0 && y<0){
+        return 3;
+    }else if(x>0 && y>0){
+        return 1;
+    }else{
+        return 2;
+    }
+}
+
