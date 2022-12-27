@@ -1,0 +1,62 @@
+//문자 반복 출력하기
+function solution(my_string, n) {
+    var answer = '';
+    
+    for(i of my_string){
+        for(let j = 0; j<n; j++){
+            answer = answer + i;
+        }
+    }
+    
+    return answer;
+}
+
+//짝수는 싫어요
+function solution(n) {
+    var answer = [];
+    
+    for(let i = 0; i<=n; i++){
+        if(i%2 == 1){
+            answer.push(i);
+        }
+    }
+    return answer;
+}
+
+//중앙값 구하기
+function solution(array) {
+    var answer = array;
+    let a = 0;
+    array.sort((a,b)=> a-b);
+    
+    a = array.length / 2;
+    a = Math.floor(a);
+    
+    return answer[a];
+  }
+  
+  //문자열안에 문자열
+  function solution(str1, str2) {
+    var answer = 0;
+    
+    
+    if(str1.includes(str2)){
+        return 1;
+    }else{
+        return 2;
+    }  
+  }
+
+  //옷가게 할인 받기
+  function solution(price) {
+    var answer = 0;
+    if(price >= 500000){
+        return parseInt(price - price * 0.20);
+    }else if(price >= 300000){
+        return parseInt(price -  price * 0.10);
+    }else if(price >= 100000){
+        return parseInt(price - price * 0.05);
+    }else{
+        return price;
+    }
+}

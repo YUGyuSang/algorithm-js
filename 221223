@@ -43,3 +43,4 @@ function solution(numbers) {
   
   return answer = numbers[0] * numbers[1];
 }
+
